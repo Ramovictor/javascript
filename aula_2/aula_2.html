@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Ação</th>
+            <th>Media</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ramon Victor Santos Porto</td>
+            <td><input type="number" class="nota_1 form-control" /></td>
+            <td><input type="number" class="nota_2 form-control" /></td>
+            <td>
+              <button onclick="calcularMedia(this)" class="btn btn-primary">
+                Calcular
+              </button>
+            </td>
+            <td class="media"></td>
+            <td class="status"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Poliana da Conceição Pedrini</td>
+            <td><input type="number" class="nota_1 form-control" /></td>
+            <td><input type="number" class="nota_2 form-control" /></td>
+            <td>
+              <button onclick="calcularMedia(this)" class="btn btn-primary">
+                Calcular
+              </button>
+            </td>
+            <td class="media"></td>
+            <td class="status"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Sandro Andrade Porto</td>
+            <td><input type="number" class="nota_1 form-control" /></td>
+            <td><input type="number" class="nota_2 form-control" /></td>
+            <td>
+              <button onclick="calcularMedia(this)" class="btn btn-primary">
+                Calcular
+              </button>
+            </td>
+            <td class="media"></td>
+            <td class="status"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="aula_2.js"></script>
+  </body>
+</html>
