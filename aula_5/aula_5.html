@@ -18,9 +18,9 @@
         type="button"
         class="btn btn-primary"
         data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+        data-bs-target="#modalProduto"
       >
-        Launch demo modal
+        Novo produto
       </button>
     </div>
 
@@ -38,7 +38,7 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="modalProduto"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -57,10 +57,17 @@
             ></button>
           </div>
           <div class="modal-body">
+            <input type="hidden" name="id" id="id" />
             Deseja cadastrar produto?
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
-              <input type="text" name="nome" id="nome" class="form-control" />
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                class="form-control"
+                autocomplete="off"
+              />
             </div>
             <div class="mb-3">
               <label for="preco" class="form-label">Preço</label>
@@ -92,7 +99,7 @@
             <button
               type="button"
               class="btn btn-primary"
-              onclick="cadastrarProduto()"
+              onclick="salvarProduto()"
             >
               Cadastrar
             </button>

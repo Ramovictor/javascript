@@ -1,4 +1,4 @@
-const GLOBAL_URL = `https://6a50327cf45d5352b6121ab2.mockapi.io/produtos`;
+const GLOBAL_URL = `https://6a6bdfa09939b347ccce51a8.mockapi.io/produtos`;
 
 async function carregarProdutos() {
   try {
@@ -61,27 +61,52 @@ async function removerProduto(id) {
     carregarProdutos();
   }
 }
-async function cadastrarProduto() {
-  const produto = {
-    nome: document.querySelector("#nome").value,
-    preco: Number(document.querySelector("#preco").value) || 0,
-    quantidade: Number(document.querySelector("#nome").value) || 0,
-  };
+async function adicionarProduto() {
+  const produto = criarObjetoProduto();
 
   try {
     await fetch(GLOBAL_URL, {
       method: "POST",
       headers: {
-        "Content-Type": "aplication/json",
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(produto),
     });
-
+    limparFormulario();
+    fecharModal();
     carregarProdutos();
   } catch (error) {
     console.log(error);
     alert("Não foi possivel cadastrar esse produto!");
   }
+}
+
+async function atualizarProduto() {}
+
+function salvarProduto() {}
+
+function carregarProdutoDetalhe() {}
+
+function preencherFormulario() {}
+
+function limparFormulario() {
+  document.querySelector("#nome").value = "";
+  document.querySelector("#preco").value = "";
+  document.querySelector("#quantidade").value = "";
+}
+
+function fecharModal() {
+  const modalHtml = document.querySelector("#modalProduto");
+  const modal = bootstrap.Modal.getOrCreateInstance(modalHtml);
+  modal.hide();
+}
+
+function criarObjetoProduto() {
+  const produto = {
+    nome: document.querySelector("#nome").value,
+    preco: Number(document.querySelector("#preco").value) || 0,
+    quantidade: Number(document.querySelector("#quantidade").value) || 0,
+  };
 }
 
 carregarProdutos();
