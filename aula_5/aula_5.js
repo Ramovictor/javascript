@@ -26,6 +26,9 @@ function listarProdutos(produtos) {
            <button class=" btn btn-danger" onclick="removerProduto(${produto.id})">
            Remover
            </button>
+           <button class=" btn btn-danger" onclick="removerProduto(${produto.id})">
+           Remover
+           </button>
         </td>
         
       </tr>
